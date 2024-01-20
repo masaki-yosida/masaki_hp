@@ -2,7 +2,9 @@
 Rails.application.routes.draw do
   resources :pages do
     collection do
-      get 'ma'
+      get 'about'
+      get 'works'
+      get 'contact'
     end
   end
     root 'pages#index'

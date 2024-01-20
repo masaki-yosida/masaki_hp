@@ -1,5 +1,8 @@
 class PagesController < ApplicationController
-  def ma
-
+  def about
+  end
+  def works
+  end
+  def contact
   end
 end
