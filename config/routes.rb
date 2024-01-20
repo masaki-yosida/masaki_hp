@@ -5,6 +5,7 @@ Rails.application.routes.draw do
       get 'about'
       get 'works'
       get 'contact'
+      get 'index'
     end
   end
     root 'pages#index'
