@@ -1,24 +1,59 @@
-# README
+# 問題点ロフィールを見れるようにする
+投稿が長くなる（見るのか）
+体重。身長、
+スト値
+みんなに改善依頼をできるようにする（公開するか非公開を選べる）
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+プロフィール画像 (avatar):
 
-Things you may want to cover:
 
-* Ruby version
+エラー
+タイトルが空白で追加するを押すとエラーが起きる
 
-* System dependencies
+ユーザー詳細
+プロフィール画像 (avatar):保存できない
+保存ができるが入力画面に戻る
+何個も投稿できてしまう
 
-* Configuration
 
-* Database creation
+デザイン
+表示をブートストラップを使う
+ジャバスクリプトを使う
 
-* Database initialization
+最後にやること
+dbにいらないテーブルがないか確認削除
 
-* How to run the test suite
+# アプリケーション名
+自己分析（１日の生活を振り返るアプリ）
 
-* Services (job queues, cache servers, search engines, etc.)
+# アプリケーション概要
 
-* Deployment instructions
 
-* ...
+# URL
+# テスト用アカウント
+# 利用方法
+# アプリケーションを作成した背景
+
+
+# 実装予定の機能
+# データベース設計
+# 画面遷移図
+# 開発環境
+*フロントエンド言語：JavaScript、HTML、CSS
+
+*バックエンドフレームワーク：Rails7.0.0 
+
+*バックエンド言語:Ruby3.2.0
+
+*ミドルウェア：Mysql0.5.5、PostgreSQL
+
+*インフラ：Render
+
+# 工夫したポイント
+# 改善点
+# 制作時間
+
+
+合計
+# 歴史
+
