@@ -28,6 +28,7 @@ HTMLの文が多くなり一々データーの入ったパソコンを開かな�
 Basic認証で投稿画面に行かせない（セキュリティ面で問題があれば　gemのdeviceでログイン機能を追加する）
 またはブログORポートフォリオのサイトでもBasic認証をかける
 イメージ図
+<a href="https://gyazo.com/1bb2fa9b36158a9835298dc72304f681"><img src="https://i.gyazo.com/1bb2fa9b36158a9835298dc72304f681.png" alt="Image from Gyazo" width="332"/></a>
 投稿
 ブログ（文字、写真）
 ポートフォリを（画像OR動画、文字、URL）
