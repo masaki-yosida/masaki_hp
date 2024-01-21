@@ -5,6 +5,7 @@ Rails.application.routes.draw do
       get 'works'
       get 'contact'
       get 'index'
+      get 'bunnkatu'
     end
   end
     root 'pages#index'
