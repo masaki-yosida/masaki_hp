@@ -3,8 +3,7 @@
 <!-- ブログ（文字、写真）を投稿可能にする-->
 
 
-<%= form_with(model: @page, local: true) do |form| %>
-
+<%= form_with(model: @page, local: true, html: {multipart: true}, url: pages_path) do |form| %>
 
   
   <%= form.label :title %>
@@ -13,9 +12,8 @@
   <%= form.label :content %>
   <%= form.text_area :content %>
 
-  <%= form.label :image %>
+  <%= form.label :photo %>
   <%= form.file_field :image %>
-
 
   <!-- 他のフォームの要素... -->
 

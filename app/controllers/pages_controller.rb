@@ -6,16 +6,10 @@ class PagesController < ApplicationController
   end
   def contact
   end
-
-  def show
-    @page = Page.find(params[:id])
-  end
-
-
   def create
     @page = Page.new(page_params)
     if @page.save
-      redirect_to @page, notice: 'Blog post was successfully created.'
+      redirect_to @page, notice: 'Page was successfully created.'
     else
       render :new
     end
@@ -24,6 +18,6 @@ class PagesController < ApplicationController
   private
 
   def page_params
-    params.require(:page).permit(:title, :content, :image)
+    params.permit(:title, :content, :image)
   end
 end
