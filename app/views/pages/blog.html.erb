@@ -2,21 +2,15 @@
 <%= link_to 'プロフィール', pages_path %>
 <%= link_to '連絡先', contact_pages_path %>
 
-<% if @blog_post %>
-  <h1><%= @blog_post.title %></h1>
-  <p><%= @blog_post.content %></p>
-  <%= image_tag @blog_post.photo if @blog_post.photo.attached? %>
+ <% if @page %>
+  <h1><%= @page.title %></h1>
+  <p><%= @page.content %></p>
+  <!--　一時削除
+  <%= image_tag @page.image if @page.image.attached? %>
+   -->
 <% else %>
-  <p>投稿がまだありませんしばらくお待ちください。</p>
+  <p>投稿がありません。</p>
 <% end %>
-
-
-
-
-
-
-
-
 
 
 
