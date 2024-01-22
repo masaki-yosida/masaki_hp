@@ -5,9 +5,7 @@
  <% if @page %>
   <h1><%= @page.title %></h1>
   <p><%= @page.content %></p>
-  <% if @page.image.attached? %>
-    <%= image_tag @page.image %>
-  <% end %>
+  <%= image_tag url_for(@page.image) if @page.image.attached? %>
 <% else %>
   <p>投稿がありません。</p>
 <% end %>
