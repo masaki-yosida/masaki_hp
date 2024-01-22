@@ -2,7 +2,6 @@ class PagesController < ApplicationController
   def bunnkatu
   end
   def blog
-    @page = Page.first
   end
   def contact
   end
@@ -14,14 +13,11 @@ class PagesController < ApplicationController
       render :new
     end
   end
-
+  
   def new
     @blog_post = Page.new
   end
 
-  def show
-    @page = Page.find(params[:id])
-  end
   private
 
   def blog_post_params
