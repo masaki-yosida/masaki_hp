@@ -1,14 +1,9 @@
-ブログ
+成果物
 <%= link_to 'プロフィール', pages_path %>
 <%= link_to '連絡先', contact_pages_path %>
 
-<% if @blog_post %>
-  <h1><%= @blog_post.title %></h1>
-  <p><%= @blog_post.content %></p>
-  <%= image_tag @blog_post.photo if @blog_post.photo.attached? %>
-<% else %>
-  <p>投稿がまだありませんしばらくお待ちください。</p>
-<% end %>
+
+
 
 
 
