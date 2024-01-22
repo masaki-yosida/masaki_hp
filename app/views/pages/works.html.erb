@@ -3,21 +3,13 @@
 <%= link_to '連絡先', contact_pages_path %>
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+<% @pages.each do |page| %>
+  <div>
+    <h2><%= page.title %></h2>
+    <p><%= page.content %></p>
+    <%= image_tag url_for(page.image) if page.image.attached? %>
+  </div>
+<% end %>
 
 
 
