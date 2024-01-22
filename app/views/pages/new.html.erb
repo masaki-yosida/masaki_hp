@@ -1,5 +1,9 @@
-<!--隠して　Basic認証を使いページに行かせないよう　 -->
-<!-- ブログ（文字、写真）を投稿可能にする-->
+<!--隠してBasic認証を使いページに行かせないよう -->
+<!--写真を複数枚投稿可能にする -->
+
+
+
+<!-- ブログ投稿-->
 <%= form_with(model: @page, url: pages_path, method: :post, local: true) do |form| %>
   <% if @page.errors.any? %>
     <div id="error_explanation">
