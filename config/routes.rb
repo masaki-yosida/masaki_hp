@@ -2,7 +2,7 @@
 Rails.application.routes.draw do
   resources :pages do
     collection do
-      get 'works'
+      get 'blog'
       get 'contact'
       get 'index'
       get 'bunnkatu'
