@@ -7,17 +7,24 @@ class PagesController < ApplicationController
   def contact
   end
   def create
-    @page = Page.new(page_params)
-    if @page.save
-      redirect_to @page, notice: 'Page was successfully created.'
+    @blog_post = Page.new(blog_post_params)
+    if @blog_post.save
+      redirect_to @blog_post, notice: 'Blog post was successfully created.'
     else
       render :new
     end
   end
 
+  def new
+    @blog_post = Page.new
+  end
+
+  def show
+    @page = Page.find(params[:id])
+  end
   private
 
-  def page_params
-    params.permit(:title, :content, :image)
+  def blog_post_params
+    params.require(:page).permit(:title, :content, :photo) # もしフォームに他のフィールドがあれば適宜追加
   end
 end
