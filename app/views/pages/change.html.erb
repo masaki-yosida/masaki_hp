@@ -1,0 +1,13 @@
+<!-- app/views/pages/change.html.erb -->
+<h1>All Pages</h1>
+
+<% @pages.each do |page| %>
+  <div>
+    <h2><%= page.title %></h2>
+    <p><%= page.content %></p>
+    <%= link_to '詳細ページへ', page_path(page) %>
+  </div>
+<% end %>
+
+<%= link_to 'ブログを投稿ページ', new_page_path %>
+<%= link_to 'TOP', pages_path %>

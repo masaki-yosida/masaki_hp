@@ -6,6 +6,8 @@ Rails.application.routes.draw do
       get 'contact'
       get 'bunnkatu'
       get 'works'
+      get 'change'
+      
       
     end
   end
