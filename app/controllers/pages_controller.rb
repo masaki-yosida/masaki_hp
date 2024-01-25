@@ -1,10 +1,15 @@
 class PagesController < ApplicationController
   def bunnkatu
+    @pages = Page.all
+
   end
   def contact
   end
   def works
     @pages = Page.all
+  end
+  def show
+    @page = Page.find(params[:id])
   end
   
   def index

@@ -8,6 +8,15 @@
 
 
 
+<% @pages.each do |page| %>
+  <div>
+    <h2><%= page.title %></h2>
+    <%= link_to '詳細ページへ', page_path(page) %>
+  </div>
+<% end %>
+
+
+
 
 <%= link_to 'ブログを投稿ページ', new_page_path %>
 <%= link_to 'TOP', pages_path %>
