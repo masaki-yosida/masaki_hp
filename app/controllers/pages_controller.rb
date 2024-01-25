@@ -21,11 +21,12 @@ class PagesController < ApplicationController
     @page = Page.new(page_params)
 
     if @page.save
-      redirect_to @page, notice: 'Page was successfully created.'
+      redirect_to pages_path, notice: 'Blog post was successfully created.'
     else
       render :new
     end
   end
+
 
   private
   def page_params
