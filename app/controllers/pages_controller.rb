@@ -21,8 +21,8 @@ class PagesController < ApplicationController
   def destroy
     @page = Page.find(params[:id])
     @page.destroy
-
-    redirect_to pages_path, notice: '投稿が削除されました'
+  
+    redirect_to pages_path, notice: 'Page was successfully destroyed.'
   end
   
   def index
