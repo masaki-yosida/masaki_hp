@@ -2,12 +2,16 @@
 <%= link_to 'プロフィール', pages_path %>
 <%= link_to '連絡先', contact_pages_path %>
 
-<% @pages.each do |page| %>
-  <div>
-    <h2><%= page.title %></h2>
-    <p><%= page.content %></p>
-    <%= image_tag url_for(page.image) if page.image.attached? %>
-  </div>
+<% if @pages.any? %>
+  <% @pages.each do |page| %>
+    <div>
+      <h2><%= page.title %></h2>
+      <p><%= page.content %></p>
+      <%= image_tag url_for(page.image) if page.image.attached? %>
+    </div>
+  <% end %>
+<% else %>
+  <p>投稿がありません。しばらくお待ちください</p>
 <% end %>
 
 
