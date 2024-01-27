@@ -7,10 +7,9 @@ Rails.application.routes.draw do
       get 'bunnkatu'
       get 'works'
       get 'change'
-      
-      
     end
   end
+  resources :portfolios
 
   root 'pages#index'
 end
