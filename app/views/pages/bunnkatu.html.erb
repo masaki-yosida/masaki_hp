@@ -5,15 +5,13 @@
      ここに書く投稿の詳細に飛ぶページから削除、編集
 -->
 
+<ul>
+  <li><%= link_to 'ブログを投稿', new_page_path %></li>
+  <li><%= link_to 'ポートフォリオ投稿', new_portfolio_path %></li>
 
 
 
-
-
-<%= link_to 'ブログ編集ページ', change_pages_path %>
-<%= link_to 'ポートフォリオ編集', change_portfolios_path %>
-
-
-<%= link_to 'ポートフォリオ投稿', new_portfolio_path %>
-<%= link_to 'ブログを投稿ページ', new_page_path %>
+  <li><%= link_to 'ブログ編集', change_pages_path %></li>
+  <li><%= link_to 'ポートフォリオ編集', change_portfolios_path %></li>
+</ul>
 <%= link_to 'TOP', pages_path %>

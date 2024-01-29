@@ -15,4 +15,21 @@ class PortfoliosController < ApplicationController
   end
   def show
   end
+  def create
+    @portfolio = Portfolio.new(portfolio_params)
+
+    if @portfolio.save
+      redirect_to portfolios_path, notice: 'Portfolio was successfully created.'
+    else
+      render :new
+    end
+  end
+
+  private
+
+  def portfolio_params
+    params.require(:portfolio).permit(:title, :content, :image)
+  end
 end
+
+
