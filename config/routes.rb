@@ -9,11 +9,14 @@ Rails.application.routes.draw do
       get 'change'
     end
   end
+
   resources :portfolios do
     collection do
       get 'change'
+      get 'iti' 
     end
   end
+
 
   root 'pages#index'
 end
