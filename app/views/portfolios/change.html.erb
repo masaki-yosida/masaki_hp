@@ -5,8 +5,7 @@
     <div>
       <h2><%= portfolio.title %></h2>
       <p><%= portfolio.content %></p>
-      <%= link_to '編集', edit_portfolio_path(@portfolio) %>
-<%= link_to '削除', @portfolio, method: :delete, data: { confirm: '本当に削除しますか？' } %>
+      
     </div>
   <% end %>
 <% else %>
