@@ -28,6 +28,23 @@ class PortfoliosController < ApplicationController
     end
   end
 
+  def update
+    @portfolio = Portfolio.find(params[:id])
+
+    if @portfolio.update(portfolio_params)
+      redirect_to @portfolio, notice: '投稿が更新されました'
+    else
+      render :edit
+    end
+  end
+
+  def destroy
+    @portfolio = Portfolio.find(params[:id])
+    @portfolio.destroy
+  
+    redirect_to pages_path, notice: 'Page was successfully destroyed.'
+  end
+
   private
 
   def portfolio_params
