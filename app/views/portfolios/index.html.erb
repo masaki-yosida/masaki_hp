@@ -4,7 +4,7 @@
 <%= link_to 'ブログ', works_pages_path %>
 
 <h1>ポートフォリオ集</h1>
-<% if @portfolios.any? %>
+<% if @portfolio.any? %>
   <% @portfolios.each do |portfolio| %>
     <div>
       <h2><%= portfolio.title %></h2>

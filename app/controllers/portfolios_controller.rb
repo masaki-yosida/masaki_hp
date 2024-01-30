@@ -12,21 +12,22 @@ class PortfoliosController < ApplicationController
   end
   
   def index
-    @portfolios = Portfolio.all
+    @portfolio = Portfolio.all
   end
   
   def show
   end
+
   def create
     @portfolio = Portfolio.new(portfolio_params)
-
     if @portfolio.save
-      redirect_to portfolios_path, notice: 'Portfolio was successfully created.'
+      redirect_to portfolios_path, notice: 'ポートフォリオが作成されました。'
     else
       render :new
     end
   end
 
+  
   private
 
   def portfolio_params
