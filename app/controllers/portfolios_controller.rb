@@ -21,7 +21,7 @@ class PortfoliosController < ApplicationController
     @portfolio = Portfolio.new(portfolio_params)
 
     if @portfolio.save
-      redirect_to portfolios_path, notice: 'Portfolio was successfully created.'
+      redirect_to pages_path
     else
       render :new
     end
