@@ -9,6 +9,7 @@
     <div>
       <h2><%= portfolio.title %></h2>
       <p><%= portfolio.content %></p>
+       <%= image_tag url_for(portfolio.image) if portfolio.image.attached? %>
       
     </div>
   <% end %>

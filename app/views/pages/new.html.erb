@@ -5,7 +5,7 @@
 
 <!-- ブログ投稿-->
 
-<%= form_with(model: @page, url: pages_path, method: :post, local: true) do |form| %>
+<%= form_with(model: @page, url: pages_path, method: :post, local: true, data: { turbo: false }) do |form| %>
 
   
 
