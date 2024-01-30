@@ -1,6 +1,6 @@
 class PortfoliosController < ApplicationController
   def change
-    # change アクションの処理を追加
+    @portfolios = Portfolio.all
   end
 
   def new

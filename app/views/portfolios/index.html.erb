@@ -2,7 +2,8 @@
 <%= link_to 'プロフィール', pages_path %>
 <%= link_to 'お問い合わせ', contact_pages_path %>
 <%= link_to 'ブログ', works_pages_path %>
-<h1>Portfolio Index</h1>
+
+<h1>ポートフォリオ集</h1>
 <% if @portfolios.any? %>
   <% @portfolios.each do |portfolio| %>
     <div>
@@ -17,6 +18,5 @@
 
 
 
-<%= link_to 'New Portfolio', new_portfolio_path %>
 
 
