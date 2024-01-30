@@ -2,12 +2,12 @@
 <%= link_to '削除', page_path(@page.id), data: { turbo_method: :delete } %>
 <%= link_to 'ブログ編集ページ', change_pages_path %>
 <p>
-  <strong>Title:</strong>
+  タイトル
   <%= @page.title %>
 </p>
 
 <p>
-  <strong>Content:</strong>
+  内容
   <%= @page.content %>
 </p>
 

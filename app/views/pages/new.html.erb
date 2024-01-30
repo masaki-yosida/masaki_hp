@@ -5,35 +5,25 @@
 
 <!-- ブログ投稿-->
 <%= form_with(model: @page, url: pages_path, method: :post, local: true) do |form| %>
-  <% if @page.errors.any? %>
-    <div id="error_explanation">
-      <h2><%= pluralize(@page.errors.count, "error") %> prohibited this page from being saved:</h2>
-
-      <ul>
-        <% @page.errors.full_messages.each do |message| %>
-          <li><%= message %></li>
-        <% end %>
-      </ul>
-    </div>
-  <% end %>
+  
 
   <div class="field">
-    <%= form.label :title %>
+    タイトル
     <%= form.text_field :title %>
   </div>
 
   <div class="field">
-    <%= form.label :content %>
+    内容
     <%= form.text_area :content %>
   </div>
 
   <div class="field">
-    <%= form.label :image %>
+   画像
     <%= form.file_field :image %>
   </div>
 
   <div class="actions">
-    <%= form.submit "Create Blog Post" %>
+    <%= form.submit "投稿する" %>
   </div>
 <% end %>
 <%= link_to 'TOP', pages_path %>
