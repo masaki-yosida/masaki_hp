@@ -1,3 +1,16 @@
 <%= link_to 'プロフィール', pages_path %>
 <%= link_to '連絡先', contact_pages_path %>
 <%= link_to 'ブログ', works_pages_path %>
+<!-- app/views/portfolios/index.html.erb -->
+
+<h1>Portfolio Index</h1>
+
+<% @portfolios.each do |portfolio| %>
+  <div>
+    <h2><%= portfolio.title %></h2>
+    <p><%= portfolio.content %></p>
+    <%= image_tag url_for(portfolio.image) if portfolio.image.attached? %>
+  </div>
+<% end %>
+
+<%= link_to 'New Portfolio', new_portfolio_path %>
