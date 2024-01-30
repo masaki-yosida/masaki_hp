@@ -11,7 +11,7 @@
 
 
 
-  <li><%= link_to 'ブログ編集', change_pages_path %></li>
-  <li><%= link_to 'ポートフォリオ編集', change_portfolios_path %></li>
+  <li><%= link_to 'ブログ編集', change_pages_path, data: { turbo:false } %></li>
+  <li><%= link_to 'ポートフォリオ編集', change_portfolios_path, data: { turbo:false } %></li>
 </ul>
 <%= link_to 'TOP', pages_path %>

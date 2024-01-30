@@ -2,7 +2,7 @@
 
 <h1>Edit Page</h1>
 
-<%= form_with(model: @page, url: page_path(@page), method: :patch, local: true) do |form| %>
+<%= form_with(model: @page, url: page_path(@page), method: :patch, local: true, data: { turbo:false }) do |form| %>
   
 
   <div class="field">

@@ -1,6 +1,6 @@
 <h1>Edit Portfolio</h1>
 
-<%= form_with(model: @portfolio, url: portfolio_path(@portfolio), method: :patch, local: true) do |form| %>
+<%= form_with(model: @portfolio, url: portfolio_path(@portfolio), method: :patch, local: true, data: { turbo:false }) do |form| %>
   <% if @portfolio.errors.any? %>
     <div id="error_explanation">
       <h2><%= pluralize(@portfolio.errors.count, "error") %> prohibited this portfolio from being saved:</h2>
