@@ -12,8 +12,8 @@ Rails.application.routes.draw do
 
   resources :portfolios do
     collection do
-      get 'change'
-      get 'iti' 
+      get 'change' 
+      get 'index'
     end
   end
 

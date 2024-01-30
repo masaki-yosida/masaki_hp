@@ -10,9 +10,11 @@ class PortfoliosController < ApplicationController
   def edit
     @portfolio = Portfolio.find(params[:id])
   end
-  def iti
-    @portfolio = Portfolio.all
+  
+  def index
+    @portfolios = Portfolio.all
   end
+  
   def show
   end
   def create

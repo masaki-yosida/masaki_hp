@@ -1,0 +1,22 @@
+<!-- app/views/portfolios/index.html.erb -->
+<%= link_to 'プロフィール', pages_path %>
+<%= link_to 'お問い合わせ', contact_pages_path %>
+<%= link_to 'ブログ', works_pages_path %>
+<h1>Portfolio Index</h1>
+<% if @portfolios.any? %>
+  <% @portfolios.each do |portfolio| %>
+    <div>
+      <h2><%= portfolio.title %></h2>
+      <p><%= portfolio.content %></p>
+      
+    </div>
+  <% end %>
+<% else %>
+  <p>投稿がありません。</p>
+<% end %>
+
+
+
+<%= link_to 'New Portfolio', new_portfolio_path %>
+
+
