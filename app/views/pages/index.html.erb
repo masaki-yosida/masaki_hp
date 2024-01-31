@@ -7,7 +7,7 @@
   <!--隠してBasic認証を使いページに行かせないようにする追加でログイン機能の追加も考える　 -->
 
 <div class="container">
-<%= link_to '投稿ページ', branch_pages_path %>
+
 <%= link_to 'ブログ', works_pages_path, class: "btn_05" %>
 <%= link_to 'お問い合わせ', contact_pages_path, class: "btn_05"  %>
 <%= link_to 'ポートフォリオ', portfolios_path, class: "btn_05"  %>
@@ -30,7 +30,7 @@
     <li >所在:埼玉市内</li>
   </ul>
   <ul>
-    <h1 class="show" >スキル</h1>
+    <h1 class= "show" ><%= link_to 'スキル', branch_pages_path, class: "no" %></h1>
     <li >HTML</li>
     <li >CSS</li>
     <li >Ruby</li>

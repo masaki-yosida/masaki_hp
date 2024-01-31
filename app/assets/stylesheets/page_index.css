@@ -66,8 +66,8 @@ a.btn_05:hover {
 }
 .show {
   margin-top: 20px;
+  padding-bottom: 1pn;
   font-size:1.5rem;
- 
   font-weight:bold;
   color: #27acd9;
   text-shadow:
@@ -81,5 +81,10 @@ a.btn_05:hover {
     -7px 14px 1px #9E9E9E,
     -8px 16px 1px #BDBDBD,
     -9px 18px 1px #E0E0E0;
+
 }
 /* ここまで*/
+
+.no{
+  text-decoration: none;
+}
