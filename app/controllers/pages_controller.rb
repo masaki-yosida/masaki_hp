@@ -1,7 +1,7 @@
 class PagesController < ApplicationController
   
 
-  def bunnkatu
+  def branch
   end
 
   def contact

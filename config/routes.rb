@@ -4,7 +4,7 @@ Rails.application.routes.draw do
     collection do
       get 'blog'
       get 'contact'
-      get 'bunnkatu'
+      get 'branch'
       get 'works'
       get 'change'
     end
