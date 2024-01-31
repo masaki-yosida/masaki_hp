@@ -1,4 +1,10 @@
-<!--隠してBasic認証を使いページに行かせないようにする追加でログイン機能の追加も考える　 -->
+<!-- app/views/pages/blog.html.erb -->
+<html>
+<head>
+  <%= stylesheet_link_tag 'page_index' %>
+</head>
+<body>
+  <!--隠してBasic認証を使いページに行かせないようにする追加でログイン機能の追加も考える　 -->
 <%= link_to '投稿ページ', branch_pages_path %>
 
 
@@ -6,7 +12,7 @@
 <%= link_to 'お問い合わせ', contact_pages_path %>
 <%= link_to 'ポートフォリオ', portfolios_path %>
 
-  <h2>プロフィール</h2>
+  <h2 class="emphasis_design34">プロフィール</h2>
 
 <ul>
   <h2 >プロフィール</h2>
@@ -29,8 +35,8 @@
   <h2>連絡先</h2>
   <p>x303y0853@gmail.com</p>
 </div >
-
-
+</body>
+</html>
 
 
 
