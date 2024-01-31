@@ -1,0 +1,85 @@
+
+ul{
+  padding-left:0;
+}
+
+li{
+  list-style:none;
+}
+
+.sample {
+  font-size:2rem;
+  text-align:center;
+  line-height:0.95em;
+  font-weight:bold;
+  color: #A5D6A7;
+  text-shadow:
+    1px -1px 1px #BDBDBD,
+    -1px 2px 1px #737272,
+    -2px 4px 1px #767474,
+    -3px 6px 1px #787777,
+    -4px 8px 1px #424242,
+    -5px 10px 1px #616161,
+    -6px 12px 1px #757575,
+    -7px 14px 1px #9E9E9E,
+    -8px 16px 1px #BDBDBD,
+    -9px 18px 1px #E0E0E0;
+}
+
+/* ボタンのCSS アプリケーションに使用に移動の可能性あり */
+.container {
+  text-align:center;
+  margin-left: 50rem;
+}
+a.btn_05 {
+	display: inline-block;
+  margin-left: auto;
+	text-decoration: none;
+	width: 10px 10px;
+	margin: 0.2rem ;
+	padding: 0.3rem ;
+	font-weight: bold;
+	border-radius: 0.1rem;
+	border-bottom: 7px solid #0686b2;
+	background: #27acd9;
+	color: #fff;
+  font-size: 0.8rem;
+}
+a.btn_05:hover {
+	margin-top: 3px;
+	border-bottom: 1px solid #0686b2;
+	color: #fff;
+}
+/* ここまで*/
+
+/* プロフィール説明文 */
+.center {
+  text-align:center;
+  font-size: 1rem;
+}
+/* ここまで*/
+
+/* 詳細 スキル */
+.right {
+  text-align: left;
+  margin-left: 700px;
+}
+.show {
+  margin-top: 20px;
+  font-size:1.5rem;
+ 
+  font-weight:bold;
+  color: #27acd9;
+  text-shadow:
+    1px -1px 1px #BDBDBD,
+    -1px 2px 1px #737272,
+    -2px 4px 1px #767474,
+    -3px 6px 1px #787777,
+    -4px 8px 1px #424242,
+    -5px 10px 1px #616161,
+    -6px 12px 1px #757575,
+    -7px 14px 1px #9E9E9E,
+    -8px 16px 1px #BDBDBD,
+    -9px 18px 1px #E0E0E0;
+}
+/* ここまで*/
