@@ -17,11 +17,10 @@
 </div >
 <h1 class="sample"> ブログの削除   編集画面</h1>
 
-<!-- 投稿のCSSはまだ -->
 
 <% @pages.each do |page| %>
-  <div>
-    <h2><%= page.title %></h2>
+  <div class="blog">
+    <h2>タイトル:<%= page.title %></h2>
     <%= link_to '詳細ページへ', page_path(page) %>
   </div>
 <% end %>
