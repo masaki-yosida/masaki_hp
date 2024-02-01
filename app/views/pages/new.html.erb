@@ -3,29 +3,43 @@
 
 
 
-<!-- ブログ投稿-->
 
-<%= form_with(model: @page, url: pages_path, method: :post, local: true, data: { turbo: false }) do |form| %>
-
-  
-
-  <div class="field">
-    タイトル
-    <%= form.text_field :title %>
+<!-- 
+     隠してBasic認証を使いページに行かせないよう
+     change とCSS同じ
+-->
+<html>
+<head>
+  <link rel="stylesheet" href="/assets/page_new.css">
+</head>
+  <!-- ブログ投稿-->
+<body>
+  <div class="left">
+  <%= link_to 'TOPへ', pages_path, class: "btn_05" %>
   </div>
 
-  <div class="field">
-    内容
-    <%= form.text_area :content %>
-  </div>
+  <h1 class="sample">ブログ投稿</h1>
+  <div class="container">
+    <%= form_with(model: @page, url: pages_path, method: :post, local: true, data: { turbo: false }) do |form| %>
+      
+      <div class="Form-Item">
+        <p class="Form-Item-Label"><span class="Form-Item-Label-Required">必須</span> タイトル</p>
+        <%= form.text_field :title, class: "Form-Item-Input", placeholder: "例）0月0日フレームワークについて" %>
+      </div>
 
-  <div class="field">
-   画像
-    <%= form.file_field :image %>
-  </div>
+      <div class="Form-Item">
+        <p class="Form-Item-Label"><span class="Form-Item-Label-Required">必須</span> 内容</p>
+        <%= form.text_area :content, class: "Form-Item-Input", placeholder: "例）フレームワークにはたくさんの種類がある" %>
+      </div>
 
-  <div class="actions">
-    <%= form.submit "投稿する" %>
+      <div class="Form-Item">
+        <p class="Form-Item-Label isMsg"><span class="Form-Item-Label-Required">必須</span> 画像</p>
+        <%= form.file_field :image %>
+      </div>
+
+       <%= form.submit "投稿する", class: "btn_03 Form-Btn" %>
+
+    <% end %> 
   </div>
-<% end %>
-<%= link_to 'TOP', pages_path %>
+</body>
+</html>
