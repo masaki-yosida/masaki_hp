@@ -1,18 +1,29 @@
 <!-- 
      隠してBasic認証を使いページに行かせないよう
-     ポートフォリを作成画面へ飛ぶパスを通す
-     投稿を削除する方法を考える
-     ここに書く投稿の詳細に飛ぶページから削除、編集
-     bunnki
 -->
 
-<ul>
-  <li><%= link_to 'ブログを投稿', new_page_path, data: { turbo: false } %></li>
-  <li><%= link_to 'ポートフォリオ投稿', new_portfolio_path, data: { turbo: false } %></li>
+
+<!-- app/views/pages/blog.html.erb -->
+<html>
+<head>
+  <link rel="stylesheet" href="/assets/page_branch.css">
+
+</head>
+<body>
+<div class="container">
+  <ul>
+  <li><%= link_to 'ブログを投稿', new_page_path, data: { turbo: false }, class: "btn_05"  %></li>
+  <li><%= link_to 'ポートフォリオ投稿', new_portfolio_path, data: { turbo: false }, class: "btn_05"  %></li>
 
 
 
-  <li><%= link_to 'ブログ編集', change_pages_path, data: { turbo:false } %></li>
-  <li><%= link_to 'ポートフォリオ編集', change_portfolios_path, data: { turbo:false } %></li>
+  <li><%= link_to 'ブログ編集', change_pages_path, data: { turbo:false }, class: "btn_05"  %></li>
+  <li><%= link_to 'ポートフォリオ編集', change_portfolios_path, data: { turbo:false }, class: "btn_05"  %></li>
 </ul>
-<%= link_to 'TOP', pages_path %>
+<%= link_to 'TOP', pages_path, class: "btn_05" %>
+</div >
+</body>
+</html>
+
+
+

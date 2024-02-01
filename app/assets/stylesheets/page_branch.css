@@ -1,0 +1,33 @@
+
+
+ul{
+  padding-left:0;
+}
+
+li{
+  list-style:none;
+}
+
+.container {
+  text-align:center;
+
+}
+a.btn_05 {
+	display: inline-block;
+  margin-left: auto;
+	text-decoration: none;
+	width: 10px 10px;
+	margin: 0.2rem ;
+	padding: 1rem ;
+	font-weight: bold;
+	border-radius: 0.1rem;
+	border-bottom: 7px solid #0686b2;
+	background: #27acd9;
+	color: #fff;
+  font-size: 2rem;
+}
+a.btn_05:hover {
+	margin-top: 3px;
+	border-bottom: 1px solid #0686b2;
+	color: #fff;
+}
