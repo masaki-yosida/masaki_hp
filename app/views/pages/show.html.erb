@@ -3,9 +3,6 @@
     <link rel="stylesheet" href="/assets/page_show.css">
 </head>
 <body>
-
-
-
 <div class="container">
   <%= link_to '編集', edit_page_path(@page), class: "btn_05" %> 
   <%= link_to '削除', page_path(@page.id), data: { turbo_method: :delete }, class: "btn_05" %>
@@ -15,9 +12,6 @@
 <p class="sample">
   タイトル:<%= @page.title %>
 </p>
-
-
-
 <div class="two-pic">
       <div class="example">
         <% if @page.image.attached? %>
@@ -28,7 +22,6 @@
         内容:<%= @page.content %>
     </div>
 </div>
-
 </body>
 </html>
 

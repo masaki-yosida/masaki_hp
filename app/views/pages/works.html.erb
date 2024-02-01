@@ -1,16 +1,35 @@
-ブログ
-<%= link_to 'プロフィール', pages_path %>
-<%= link_to 'お問い合わせ', contact_pages_path %>
-<%= link_to 'ポートフォリオ', portfolios_path %>
+<html>
+<head>
+    <link rel="stylesheet" href="/assets/page_works.css">
+</head>
+<body>
+  <div class="container">
+  <%= link_to 'プロフィール', pages_path, class: "btn_05" %>
+<%= link_to 'お問い合わせ', contact_pages_path, class: "btn_05" %>
+<%= link_to 'ポートフォリオ', portfolios_path, class: "btn_05" %>
+</div>
+
+<p class="sample">ブログ</p>
 
 <% if @pages.any? %>
   <% @pages.each do |page| %>
-    <div>
-      <h2><%= page.title %></h2>
-      <p><%= page.content %></p>
-      <%= image_tag url_for(page.image) if page.image.attached? %>
-    </div>
+    <ul>
+    <li class="title"><%= page.title %></li>
+    <li class="time"><%= page.created_at.strftime('%Y年%m月%d日') %></li>
+    <li ><%= image_tag(url_for(page.image), class: "example") if page.image.attached? %></li>
+     <li ><%= page.content %></li>
+  </ul>
   <% end %>
 <% else %>
   <p>投稿がありません。しばらくお待ちください</p>
 <% end %>
+</body>
+</html>
+
+
+
+
+
+
+
+
