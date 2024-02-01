@@ -1,13 +1,30 @@
-<!-- app/views/pages/change.html.erb -->
-<h1>ブログの削除　編集画面</h1>
+
+<!-- 
+     隠してBasic認証を使いページに行かせないよう
+-->
+
+
+<html>
+<head>
+  <link rel="stylesheet" href="/assets/page_change.css">
+
+</head>
+<body>
+
+<div class="container">
+  <%= link_to 'ブログを投稿ページ', new_page_path, class: "btn_05" %>
+  <%= link_to 'TOP', pages_path, class: "btn_05" %>
+</div >
+<h1 class="sample"> ブログの削除   編集画面</h1>
+
+<!-- 投稿のCSSはまだ -->
 
 <% @pages.each do |page| %>
   <div>
     <h2><%= page.title %></h2>
-    <p><%= page.content %></p>
     <%= link_to '詳細ページへ', page_path(page) %>
   </div>
 <% end %>
 
-<%= link_to 'ブログを投稿ページ', new_page_path %>
-<%= link_to 'TOP', pages_path %>
+</body>
+</html>
