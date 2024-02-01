@@ -1,28 +1,31 @@
-<!-- app/views/pages/edit.html.erb -->
 
-<h1>Edit Page</h1>
-
-<%= form_with(model: @page, url: page_path(@page), method: :patch, local: true, data: { turbo:false }) do |form| %>
-  
-
-  <div class="field">
-    タイトル
-    <%= form.text_field :title %>
+<html>
+<head>
+  <link rel="stylesheet" href="/assets/page_new.css">
+</head>
+  <!-- ブログ投稿-->
+<body>
+  <div class="left">
+<%= link_to '戻る', pages_path, class: "btn_05" %>
   </div>
-
-  <div class="field">
-    内容
-    <%= form.text_area :content %>
+  <h1 class="sample">ブログ編集</h1>
+  <div class="container">
+    <%= form_with(model: @page, url: page_path(@page), method: :patch, local: true, data: { turbo:false }) do |form| %>
+      <div class="Form-Item">
+        <p class="Form-Item-Label"><span class="Form-Item-Label-Required">必須</span> タイトル</p>
+        <%= form.text_field :title, class: "Form-Item-Input" %>
+      </div>
+      <div class="Form-Item">
+        <p class="Form-Item-Label"><span class="Form-Item-Label-Required">必須</span> 内容</p>
+        <%= form.text_area :content, class: "Form-Item-Input" %>
+      </div>
+      <div class="Form-Item">
+        <p class="Form-Item-Label isMsg"><span class="Form-Item-Label-Required">必須</span> 画像</p>
+        <%= form.file_field :image %>
+      </div>
+       <%= form.submit "投稿する", class: "btn_03 Form-Btn" %>
+    <% end %> 
   </div>
+</body>
+</html>
 
-  <div class="field">
-    画像
-    <%= form.file_field :image %>
-  </div>
-
-  <div class="actions">
-    <%= form.submit "更新する" %>
-  </div>
-<% end %>
-
-<%= link_to '戻る', pages_path %>

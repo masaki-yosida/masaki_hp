@@ -1,5 +1,11 @@
 <h1><%= @portfolio.title %></h1>
 <p><%= @portfolio.content %></p>
+<% if @portfolio.image.attached? %>
+          <%= image_tag url_for(@portfolio.image) %>
+          <% end %>
+      </div>
+
+      
 
 <%= link_to 'Edit', edit_portfolio_path(@portfolio) %>
 
