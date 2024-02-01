@@ -1,16 +1,25 @@
-
-<h1>ポートフォリの削除　編集画面</h1>
+<html>
+<head>
+  <link rel="stylesheet" href="/assets/page_change.css">
+</head>
+<body>
+  <div class="container">
+<%= link_to 'ポートフォリを投稿する', new_portfolio_path, class: "btn_05" %>
+<%= link_to 'TOP', pages_path, class: "btn_05" %>
+</div>
+<h1 class="sample">ポートフォリの削除　編集画面</h1>
 
   <% @portfolios.each do |portfolio| %>
-    <div>
-      <h2><%= portfolio.title %></h2>
-      <p><%= portfolio.content %></p>
+    <div class="blog">
+      <h2>タイトル:<%= portfolio.title %></h2>
       <%= link_to '詳細ページへ', portfolio_path(portfolio) %>
-      
     </div>
   <% end %>
+</body>
+</html>
 
 
 
-<%= link_to 'ポートフォリを投稿する', new_portfolio_path %>
-<%= link_to 'TOP', pages_path %>
+
+
+
