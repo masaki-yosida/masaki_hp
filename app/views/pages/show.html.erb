@@ -1,22 +1,35 @@
 <html>
 <head>
+    <link rel="stylesheet" href="/assets/page_show.css">
 </head>
 <body>
-  <%= link_to '編集', edit_page_path(@page) %> |
-<%= link_to '削除', page_path(@page.id), data: { turbo_method: :delete } %>
-<%= link_to 'ブログ編集ページ', change_pages_path %>
-<p>
-  タイトル
-  <%= @page.title %>
+
+
+
+<div class="container">
+  <%= link_to '編集', edit_page_path(@page), class: "btn_05" %> 
+  <%= link_to '削除', page_path(@page.id), data: { turbo_method: :delete }, class: "btn_05" %>
+  <%= link_to 'ブログ編集ページ', change_pages_path, class: "btn_05" %>
+</div >
+
+<p class="sample">
+  タイトル:<%= @page.title %>
 </p>
 
-<p>
-  内容
-  <%= @page.content %>
-</p>
 
-<% if @page.image.attached? %>
-  <%= image_tag url_for(@page.image) %>
-<% end %>
+
+<div class="two-pic">
+      <div class="example">
+        <% if @page.image.attached? %>
+          <%= image_tag url_for(@page.image) %>
+          <% end %>
+      </div>
+    <div class="right-pic">
+        内容:<%= @page.content %>
+    </div>
+</div>
+
 </body>
 </html>
+
+
