@@ -1,81 +1,19 @@
-<!-- お問い合わせ画面いじるところなし-->
 
-<%= link_to 'プロフィール', pages_path %>
-<%= link_to 'ブログ', works_pages_path %>
-<%= link_to 'ポートフォリオ', portfolios_path %>
-
-
-<!-- googleのお問い合わせ-->
-<iframe  class= "homu" src="https://docs.google.com/forms/d/e/1FAIpQLSdicej2BK6wX5usv3dYPPuYLMETpnN2Rozehg5ORBi1f6ON4A/viewform?embedded=true" width="640" height="856" frameborder="0" marginheight="0" marginwidth="0">読み込んでいます…</iframe>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-  <!-- contactの元
-<!DOCTYPE html>
-<html lang="ja">
+<!-- 
+     隠してBasic認証を使いページに行かせないよう
+     change とCSS同じ
+-->
+<html>
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  
-  <title>contact</title>
-
-  <!-- style.css 
-  <link rel="stylesheet" href="css/contact.css">
-  <!-- どこでも使う 
-  <link rel="stylesheet" href="./css/style.css">
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Aoboshi+One&family=Noto+Sans+JP&family=Whisper&display=swap" rel="stylesheet">
-
+  <link rel="stylesheet" href="/assets/page_change.css">
 </head>
-  
 <body>
-  
-  <header>
-    <div class="contain flex">
-      <a href="index.html" class="pop flex">
-        Experience must be bought
-      </a>
-      <nav>
-        <ul class="pop flex">
-          <li><a href="About.html">About</a></li>
-          <li><a href="works.html">Works</a></li>
-          <li><a href="blog.html">Blog</a></li>
-          <li><a href="Contact.html">Contact</a></li>
-        </ul>
-      </nav>
-    </div>
-  </header>
-    <iframe  class= "homu" src="https://docs.google.com/forms/d/e/1FAIpQLSdicej2BK6wX5usv3dYPPuYLMETpnN2Rozehg5ORBi1f6ON4A/viewform?embedded=true" width="640" height="856" frameborder="0" marginheight="0" marginwidth="0">読み込んでいます…</iframe>
+  <div class="container">
+    <%= link_to 'プロフィール', pages_path, class: "btn_05" %>
+    <%= link_to 'ブログ', works_pages_path, class: "btn_05" %>
+    <%= link_to 'ポートフォリオ', portfolios_path, class: "btn_05" %>
+  </div >
+  <!-- googleのお問い合わせ-->
+  <iframe  class= "homu" src="https://docs.google.com/forms/d/e/1FAIpQLSdicej2BK6wX5usv3dYPPuYLMETpnN2Rozehg5ORBi1f6ON4A/viewform?embedded=true" width="640" height="856" frameborder="0" marginheight="0" marginwidth="0">読み込んでいます…</iframe>
 </body>
 </html>
--->
