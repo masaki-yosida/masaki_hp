@@ -1,38 +1,32 @@
-<h1>Edit Portfolio</h1>
-
+<html>
+<head>
+  <link rel="stylesheet" href="/assets/page_new.css">
+</head>
+<body>
+  <div class="left">
+<%= link_to '戻る', portfolios_path, class: "btn_05" %>
+  </div>
+  <h1 class="sample">ポートフォリオ編集</h1>
+  <div class="container">
 <%= form_with(model: @portfolio, url: portfolio_path(@portfolio), method: :patch, local: true, data: { turbo:false }) do |form| %>
-  <% if @portfolio.errors.any? %>
-    <div id="error_explanation">
-      <h2><%= pluralize(@portfolio.errors.count, "error") %> prohibited this portfolio from being saved:</h2>
-      <ul>
-        <% @portfolio.errors.full_messages.each do |message| %>
-          <li><%= message %></li>
-        <% end %>
-      </ul>
-    </div>
-  <% end %>
+<div class="Form-Item">
+        <p class="Form-Item-Label"><span class="Form-Item-Label-Required">必須</span> 題名</p>
+        <%= form.text_field :title, class: "Form-Item-Input" %>
+      </div>
 
-  <div class="field">
-    <%= form.label :title %>
-    <%= form.text_field :title %>
+      <div class="Form-Item">
+        <p class="Form-Item-Label"><span class="Form-Item-Label-Required">必須</span> 内容</p>
+        <%= form.text_area :content, class: "Form-Item-Input" %>
+      </div>
+      <div class="Form-Item">
+        <p class="Form-Item-Label isMsg"><span class="Form-Item-Label-Required">必須</span> 画像</p>
+        <%= form.file_field :image %>
+      </div>
+       <%= form.submit "更新する", class: "btn_03 Form-Btn" %>
+    <% end %> 
   </div>
-
-  <div class="field">
-    <%= form.label :content %>
-    <%= form.text_area :content %>
-  </div>
-
-  <div class="field">
-    <%= form.label :image %>
-    <%= form.file_field :image %>
-  </div>
-
-  <div class="actions">
-    <%= form.submit %>
-  </div>
-<% end %>
-
-<%= link_to 'Back', portfolios_path %>
+</body>
+</html>
 
 
 
