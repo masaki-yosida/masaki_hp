@@ -1,14 +1,29 @@
-<h1><%= @portfolio.title %></h1>
-<p><%= @portfolio.content %></p>
-<% if @portfolio.image.attached? %>
+
+<html>
+<head>
+    <link rel="stylesheet" href="/assets/page_show.css">
+</head>
+<body>
+<div class="container">
+  <%= link_to '編集', edit_portfolio_path(@portfolio), class: "btn_05" %> 
+  <%= link_to '削除', portfolio_path(@portfolio.id), data: { turbo_method: :delete }, class: "btn_05" %>
+  <%= link_to 'ブログ編集ページ', change_portfolios_path, class: "btn_05" %>
+</div >
+
+<p class="sample">
+  タイトル:<%= @portfolio.title %>
+</p>
+<div class="two-pic">
+      <div class="example">
+        <% if @portfolio.image.attached? %>
           <%= image_tag url_for(@portfolio.image) %>
           <% end %>
       </div>
+    <div class="right-pic">
+        内容:<%= @portfolio.content %>
+    </div>
+</div>
+</body>
+</html>
 
-      
 
-<%= link_to 'Edit', edit_portfolio_path(@portfolio) %>
-
-<%= link_to '削除', portfolio_path(@portfolio.id), data: { turbo_method: :delete } %>
-
-<%= link_to 'Back', portfolios_path %>
