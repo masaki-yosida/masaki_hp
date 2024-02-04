@@ -1,32 +1,39 @@
-<!-- app/views/portfolios/new.html.erb -->
-
-<h1>作品投稿</h1>
-
-<%= form_with(model: @portfolio, url: portfolios_path, method: :post, local: true, data: { turbo: false }) do |form| %>
-  <% if @portfolio.errors.any? %>
-    <div id="error_explanation">
-      <h2><%= pluralize(@portfolio.errors.count, "error") %> prohibited this portfolio from being saved:</h2>
-    </div>
-  <% end %>
-
-  <div class="field">
-    作品名
-    <%= form.text_field :title %>
+<!-- 
+     隠してBasic認証を使いページに行かせないよう
+     change とCSS同じ
+-->
+<html>
+<head>
+  <link rel="stylesheet" href="/assets/page_new.css">
+</head>
+  <!-- ブログ投稿-->
+<body>
+  <div class="left">
+  <%= link_to 'TOPへ', portfolios_path, class: "btn_05" %>
   </div>
 
-  <div class="field">
-    概要
-    <%= form.text_area :content %>
-  </div>
+  <h1 class="sample">ポートフォリオ投稿</h1>
+  <div class="container">
+    <%= form_with(model: @portfolio, url: portfolios_path, method: :post, local: true, data: { turbo: false }) do |form| %>
+      
+      <div class="Form-Item">
+        <p class="Form-Item-Label"><span class="Form-Item-Label-Required">必須</span> タイトル</p>
+        <%= form.text_field :title, class: "Form-Item-Input", placeholder: "タイトルを入力してください" %>
+      </div>
 
-  <div class="field">
-    画像
-    <%= form.file_field :image %>
-  </div>
+      <div class="Form-Item">
+        <p class="Form-Item-Label"><span class="Form-Item-Label-Required">必須</span>仕様</p>
+        <%= form.text_area :content, class: "Form-Item-Input", placeholder: "内容を記入ください" %>
+      </div>
 
-  <div class="actions">
-    <%= form.submit "投稿する" %>
-  </div>
-<% end %>
+      <div class="Form-Item">
+        <p class="Form-Item-Label isMsg"><span class="Form-Item-Label-Required">必須</span> 画像</p>
+        <%= form.file_field :image %>
+      </div>
 
-<%= link_to '戻る', portfolios_path %>
+       <%= form.submit "投稿する", class: "btn_03 Form-Btn" %>
+
+    <% end %> 
+  </div>
+</body>
+</html>
