@@ -1,22 +1,30 @@
-<!-- app/views/portfolios/index.html.erb -->
-<%= link_to 'プロフィール', pages_path %>
-<%= link_to 'お問い合わせ', contact_pages_path %>
-<%= link_to 'ブログ', works_pages_path %>
+<html>
+<head>
+    <link rel="stylesheet" href="/assets/page_works.css">
+</head>
+<body>
+  <div class="container">
+  <%= link_to 'プロフィール', pages_path, class: "btn_05" %>
+<%= link_to 'お問い合わせ', contact_pages_path, class: "btn_05" %>
+<%= link_to 'ブログ', works_pages_path, class: "btn_05" %>
+</div>
 
-<h1>ポートフォリオ集</h1>
+<p class="sample">ブログ</p>
+
 <% if @portfolios.any? %>
   <% @portfolios.each do |portfolio| %>
-    <div>
-      <h2><%= portfolio.title %></h2>
-      <p><%= portfolio.content %></p>
-       <%= image_tag url_for(portfolio.image) if portfolio.image.attached? %>
-      
-    </div>
+    <ul>
+    <li class="title"><%= portfolio.title %></li>
+    <li class="time"><%= portfolio.created_at.strftime('%Y年%m月%d日') %></li>
+    <li ><%= image_tag(url_for(portfolio.image), class: "example") if portfolio.image.attached? %></li>
+     <li ><%= portfolio.content %></li>
+  </ul>
   <% end %>
 <% else %>
-  <p>投稿がありません。</p>
+  <p>投稿がありません。しばらくお待ちください</p>
 <% end %>
-
+</body>
+</html>
 
 
 
