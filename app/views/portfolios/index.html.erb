@@ -1,31 +1,36 @@
 <html>
 <head>
-    <link rel="stylesheet" href="/assets/page_works.css">
+    <link rel="stylesheet" href="/assets/portfolio_index.css">
 </head>
 <body>
   <div class="container">
-  <%= link_to 'プロフィール', pages_path, class: "btn_05" %>
-<%= link_to 'お問い合わせ', contact_pages_path, class: "btn_05" %>
-<%= link_to 'ブログ', works_pages_path, class: "btn_05" %>
-</div>
+    <%= link_to 'プロフィール', pages_path, class: "btn_05" %>
+    <%= link_to 'お問い合わせ', contact_pages_path, class: "btn_05" %>
+    <%= link_to 'ブログ', works_pages_path, class: "btn_05" %>
+  </div>
 
-<p class="sample">ブログ</p>
+  <p class="sample">ポートフォリオ</p>
 
-<% if @portfolios.any? %>
-  <% @portfolios.each do |portfolio| %>
-    <ul>
-    <li class="title"><%= portfolio.title %></li>
-    <li class="time"><%= portfolio.created_at.strftime('%Y年%m月%d日') %></li>
-    <li ><%= image_tag(url_for(portfolio.image), class: "example") if portfolio.image.attached? %></li>
-     <li ><%= portfolio.content %></li>
-  </ul>
-  <% end %>
-<% else %>
-  <p>投稿がありません。しばらくお待ちください</p>
-<% end %>
+  <div class="flex">
+    <% if @portfolios.any? %>
+      <% @portfolios.each_with_index do |portfolio, index| %>
+        <ul>
+          <li>タイトル：<%= portfolio.title %></li>
+          <li><%= image_tag(url_for(portfolio.image), class: "example") if portfolio.image.attached? %></li>
+          <li><%= portfolio.content %></li>
+        </ul>
+
+        <% if (index + 1) % 3 == 0 %>
+       </div>
+       <div class="flex">
+      <% elsif index == @portfolios.size - 1 %>
+      </div>
+      <% end %>
+      <% end %>
+
+    <% else %>
+      <p>投稿がありません。しばらくお待ちください</p>
+    <% end %>
+  </div>
 </body>
 </html>
-
-
-
-
